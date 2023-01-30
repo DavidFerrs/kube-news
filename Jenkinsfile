@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         
-        stage ('Build Docker Image') {
+        stagee ('Build Docker Image') {
             steps {
                 script {
                     dockerapp = docker.build("davidferrs/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
